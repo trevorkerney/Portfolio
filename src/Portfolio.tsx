@@ -80,7 +80,7 @@ function Portfolio() {
                 ? (
                   <>
                     <img className='ab-logo' src='./icons/wku64.jpg' alt='Western Kentucky University' />
-                    Computer Science student at Western Kentucky University
+                    Computer Science student at WKU
                   </>
                 )
                 : (
