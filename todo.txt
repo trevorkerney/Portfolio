@@ -1,0 +1,7 @@
+projects
+- waverunner
+- powsim
+
+blog
+- tauri tutorials
+- styling for html inputs (radio, checkbox)
