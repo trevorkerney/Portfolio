@@ -6,6 +6,24 @@ function Portfolio() {
 
   const [persona, setPersona] = useState<boolean>(true);
 
+  const quotes: [string, string][] = [
+    ['Yeah, most of the time, I was convinced, shit, I\'d lost it... but there were other times... I thought I was mainlining the secret truth of the universe.', 'Rust Cohle, True Detective, season 1'],
+    ['You dad. I\'d still have you.', 'Mark Grayson, Invincible'],
+    ['So you were always like this.', 'Walter White, Better Call Saul'],
+    ['It\'s not about money... it\'s about sending a message. Everything burns!', 'The Joker, The Dark Knight'],
+    ['Yeah.', 'John Wick, John Wick']
+  ];
+
+  const getRandQuote = () => {
+    const index = Math.floor(Math.random() * quotes.length);
+    return (
+      <div className='quote'>
+        <p>{quotes[index][0]}</p>
+        <p><i>-{quotes[index][1]}</i></p>
+      </div>
+    )
+  };
+
   return (
     <div
       id='portfolio'
@@ -57,53 +75,22 @@ function Portfolio() {
                 : 'Evosity'
               }
             </h1>
-            <h4 className='ab-sec' id='job'>
-              {
-                (persona)
-                ? (
-                  <>
-                    <img className='ab-logo' src='./icons/gs-vb64.png' alt='Geosonics-VibraTech' />
-                    Special Projects Developer at Vibra-Tech
-                  </>
-                )
-                : (
-                  <>
-                    <img className='ab-logo' src='./icons/minecraft64.png' alt='the bois creative' />
-                    The bois creative MC - 51.79.79.180:25591 - &nbsp;
-                    <a href="https://www.mediafire.com/file/jdu49xnt1lbrc6e/mods.zip/file">
-                      mods
-                    </a>
-                  </>
-                )
-              }
-            </h4>
-            <h5 className='ab-sec' id='school'>
-              {
-                (persona)
-                ? (
-                  <>
-                    <img className='ab-logo' src='./icons/wku64.jpg' alt='Western Kentucky University' />
-                    Computer Science student at WKU
-                  </>
-                )
-                : (
-                  <>
-                    Minecraft&nbsp;&nbsp;-&nbsp;&nbsp;MORDHAU&nbsp;&nbsp;-&nbsp;&nbsp;CS:GO&nbsp;&nbsp;-&nbsp;&nbsp;Insurgency
-                  </>
-                )
-              }
-            </h5>
-            <p className='ab-sec' id='bio'>
-              {
-                (persona)
-                ? (
-                  "Hello, I am a (mostly) self-taught software engineering generalist driven by a passion for creating efficient, reliable, and secure applications that respect user privacy. I have a point of contention with non-creative software products that are not free and open source, as these products tend to inhibit customization, promote overcommercialization of the internet, deny peace-of-mind about privacy, and fail the test of time."
-                )
-                : (
-                  "Why so serious?"
-                )
-              }
-            </p>
+            {
+              (persona)
+              && (
+                <h4 className='ab-sec' id='job'>
+                  <img className='ab-logo' src='./icons/gs-vb64.png' alt='Geosonics-VibraTech' />
+                  Full-Stack Software Engineer at Vibra-Tech
+                </h4>
+              )
+            }
+            {
+              (persona)
+              ? <p className='ab-sec' id='bio'>
+                Hello, I am a (mostly) self-taught software engineering generalist driven by a passion for creating efficient, reliable, and secure applications. I have a point of contention with (most) software products that are not free and open source, as these products tend to inhibit customization, promote overcommercialization of the internet, and create an illusion of privacy.
+              </p>
+              : getRandQuote()
+            }
           </div>
         </div>
 
@@ -131,8 +118,8 @@ function Portfolio() {
                 <>
                   <li className='link'>
                     <span className='link-a'>
-                      <img className='link-logo' src='./icons/xbox64.png' />
-                      Xbox - Evosity
+                      <img className='link-logo' src='./icons/discord64.png' />
+                      Discord - evosity
                     </span>
                   </li>
                   <li className='link'>
@@ -142,22 +129,10 @@ function Portfolio() {
                     </a>
                   </li>
                   <li className='link'>
-                    <a className='link-a' href='https://github.com/evosity'>
-                      <img className='link-logo' src='./icons/github64.png' />
-                      GitHub - Evosity
-                    </a>
-                  </li>
-                  <li className='link'>
                     <a className='link-a' href='https://open.spotify.com/user/trevorkerney?si=7ba2d3d1c8304eef'>
                       <img className='link-logo' src='./icons/spotify64.png' />
                       Spotify - trevorkerney
                     </a>
-                  </li>
-                  <li className='link'>
-                    <span className='link-a'>
-                      <img className='link-logo' src='./icons/discord64.png' />
-                      Discord - Evosity#0001
-                    </span>
                   </li>
                 </>
               )
@@ -165,10 +140,6 @@ function Portfolio() {
           </ul>
         </div>
       </div>
-
-      {/* <div id='construction'>
-        <h2>This page is currently under construction...</h2>
-      </div> */}
     </div>
   );
 }

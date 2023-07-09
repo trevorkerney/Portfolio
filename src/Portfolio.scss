@@ -3,6 +3,14 @@ div#portfolio {
   height: 100%;
   background: #0f0f0f;
 
+  div.quote {
+    margin: 1rem 0;
+
+    p {
+      margin: .5rem 0;
+    }
+  }
+
   div#shuffle-box {
     width: 100%;
     height: 3.5rem;
