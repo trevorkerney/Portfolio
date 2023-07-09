@@ -102,13 +102,13 @@ function Portfolio() {
                 <>
                   <li className='link'>
                     <a className='link-a' href='https://github.com/trevorkerney'>
-                      <img className='link-logo' src='./icons/github64.png' />
+                      <img className='link-logo' src='./icons/github64.png' alt='github' />
                       GitHub - trevorkerney
                     </a>
                   </li>
                   <li className='link'>
                     <a className='link-a' href='https://www.linkedin.com/in/trevorkerney'>
-                      <img className='link-logo' src='./icons/linkedin64.png' />
+                      <img className='link-logo' src='./icons/linkedin64.png' alt='linkedin' />
                       LinkedIn - trevorkerney
                     </a>
                   </li>
@@ -118,19 +118,19 @@ function Portfolio() {
                 <>
                   <li className='link'>
                     <span className='link-a'>
-                      <img className='link-logo' src='./icons/discord64.png' />
+                      <img className='link-logo' src='./icons/discord64.png' alt='discord' />
                       Discord - evosity
                     </span>
                   </li>
                   <li className='link'>
                     <a className='link-a' href='https://steamcommunity.com/id/evosity/'>
-                      <img className='link-logo' src='./icons/steam64.png' />
+                      <img className='link-logo' src='./icons/steam64.png' alt='steam' />
                       Steam - Evosity
                     </a>
                   </li>
                   <li className='link'>
                     <a className='link-a' href='https://open.spotify.com/user/trevorkerney?si=7ba2d3d1c8304eef'>
-                      <img className='link-logo' src='./icons/spotify64.png' />
+                      <img className='link-logo' src='./icons/spotify64.png' alt='spotify' />
                       Spotify - trevorkerney
                     </a>
                   </li>
