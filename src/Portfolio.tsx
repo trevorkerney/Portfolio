@@ -51,7 +51,7 @@ function Portfolio() {
             }
           }
         >
-          <img id='shuffle' src='./shuffle.png' alt='shuffle' />
+          <img id='shuffle' src='/static/icons/shuffle.png' alt='shuffle' />
         </button>
       </div>
 
@@ -62,8 +62,8 @@ function Portfolio() {
             id='profile-img' 
             src={
               (persona)
-              ? './me.png'
-              : './joker600.jpg'
+              ? '/static/img/me.png'
+              : '/static/img/joker600.jpg'
             } 
             alt='Trevor Kerney' />
           </div>
@@ -79,7 +79,7 @@ function Portfolio() {
               (persona)
               && (
                 <h4 className='ab-sec' id='job'>
-                  <img className='ab-logo' src='./icons/gs-vb64.png' alt='Geosonics-VibraTech' />
+                  <img className='ab-logo' src='/static/icons/gs-vb64.png' alt='Geosonics-VibraTech' />
                   Full-Stack Software Engineer at Vibra-Tech
                 </h4>
               )
@@ -102,13 +102,13 @@ function Portfolio() {
                 <>
                   <li className='link'>
                     <a className='link-a' href='https://github.com/trevorkerney'>
-                      <img className='link-logo' src='./icons/github64.png' alt='github' />
+                      <img className='link-logo' src='/static/icons/github64.png' alt='github' />
                       GitHub - trevorkerney
                     </a>
                   </li>
                   <li className='link'>
                     <a className='link-a' href='https://www.linkedin.com/in/trevorkerney'>
-                      <img className='link-logo' src='./icons/linkedin64.png' alt='linkedin' />
+                      <img className='link-logo' src='/static/icons/linkedin64.png' alt='linkedin' />
                       LinkedIn - trevorkerney
                     </a>
                   </li>
@@ -118,19 +118,19 @@ function Portfolio() {
                 <>
                   <li className='link'>
                     <span className='link-a'>
-                      <img className='link-logo' src='./icons/discord64.png' alt='discord' />
+                      <img className='link-logo' src='/static/icons/discord64.png' alt='discord' />
                       Discord - evosity
                     </span>
                   </li>
                   <li className='link'>
                     <a className='link-a' href='https://steamcommunity.com/id/evosity/'>
-                      <img className='link-logo' src='./icons/steam64.png' alt='steam' />
+                      <img className='link-logo' src='/static/icons/steam64.png' alt='steam' />
                       Steam - Evosity
                     </a>
                   </li>
                   <li className='link'>
                     <a className='link-a' href='https://open.spotify.com/user/trevorkerney?si=7ba2d3d1c8304eef'>
-                      <img className='link-logo' src='./icons/spotify64.png' alt='spotify' />
+                      <img className='link-logo' src='/static/icons/spotify64.png' alt='spotify' />
                       Spotify - trevorkerney
                     </a>
                   </li>
