@@ -2,12 +2,44 @@ div#portfolio {
   width: 100%;
   height: 100%;
   background: #0f0f0f;
+  overflow: auto;
 
   div.quote {
     margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+
+    @media (orientation: portrait) {
+      align-items: center;
+      text-align: center;
+    }
+
+    button {
+      margin-top: .5rem;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 1rem;
+      background-color: #181818;
+      border: 1px solid #0f0f0f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.2;
+      }
+
+      img {
+        width: 60%;
+      }
+    }
 
     p {
-      margin: .5rem 0;
+      margin: .25rem 0;
     }
   }
 

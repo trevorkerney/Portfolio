@@ -11,17 +11,19 @@ function Portfolio() {
     ['You dad. I\'d still have you.', 'Mark Grayson, Invincible'],
     ['So you were always like this.', 'Walter White, Better Call Saul'],
     ['It\'s not about money... it\'s about sending a message. Everything burns!', 'The Joker, The Dark Knight'],
-    ['Yeah.', 'John Wick, John Wick']
+    ['Yeah.', 'John Wick, John Wick'],
+    ['They drew first blood.', 'John Rambo, First Blood'],
+    ['Nothing is over! Nothing! You just don\'t turn it off! It wasn\'t my war. You asked me I didn\'t ask you!', 'John Rambo, First Blood'],
+    ['Back there I could fly a gunship. I could drive a tank. I was in charge of million dollar equipment! Back here I can\'t even hold a job parking cars!', 'John Rambo, First Blood'],
   ];
 
+  const [quoteIndex, setQuoteIndex] = useState<number>(Math.floor(Math.random() * quotes.length));
+
   const getRandQuote = () => {
-    const index = Math.floor(Math.random() * quotes.length);
-    return (
-      <div className='quote'>
-        <p>{quotes[index][0]}</p>
-        <p><i>-{quotes[index][1]}</i></p>
-      </div>
-    )
+    let index = Math.floor(Math.random() * quotes.length);
+    while (index === quoteIndex)
+      index = Math.floor(Math.random() * quotes.length);
+    setQuoteIndex(index);
   };
 
   return (
@@ -89,7 +91,15 @@ function Portfolio() {
               ? <p className='ab-sec' id='bio'>
                 Hello, I am a (mostly) self-taught software engineering generalist driven by a passion for creating efficient, reliable, and secure applications. I have a point of contention with (most) software products that are not free and open source, as these products tend to inhibit customization, promote overcommercialization of the internet, and create an illusion of privacy.
               </p>
-              : getRandQuote()
+              : <div className='quote'>
+                  <p>{quotes[quoteIndex][0]}</p>
+                  <p><i>-{quotes[quoteIndex][1]}</i></p>
+                  <button
+                    onClick={getRandQuote}
+                  >
+                    <img src='/static/icons/shuffle.png' alt='shuffle quote' />
+                  </button>
+                </div>
             }
           </div>
         </div>
