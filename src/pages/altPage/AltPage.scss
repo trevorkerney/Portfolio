@@ -8,27 +8,32 @@ div.quote {
     text-align: center;
   }
 
-  button {
-    margin-top: .5rem;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 1rem;
-    background-color: #181818;
-    border: 1px solid #0f0f0f;
+  div#quote-btn-box {
     display: flex;
-    justify-content: center;
     align-items: center;
 
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.2;
-    }
-
-    img {
-      width: 60%;
+    button {
+      margin: .5rem .25rem .25rem .25rem;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 1rem;
+      background-color: #181818;
+      border: 1px solid #0f0f0f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      &:hover {
+        opacity: 0.6;
+      }
+  
+      &:active {
+        opacity: 0.2;
+      }
+  
+      img {
+        width: 60%;
+      }
     }
   }
 

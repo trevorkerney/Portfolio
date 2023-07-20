@@ -17,6 +17,13 @@ const AltPage = () => {
 
   const [quoteIndex, setQuoteIndex] = useState<number>(Math.floor(Math.random() * quotes.length));
 
+  const incrementQuote = () => {
+    if (quoteIndex >= quotes.length - 1)
+      setQuoteIndex(0);
+    else
+      setQuoteIndex(prev => prev + 1)
+  }
+
   const getRandQuote = () => {
     let index = Math.floor(Math.random() * quotes.length);
     while (index === quoteIndex)
@@ -38,11 +45,18 @@ const AltPage = () => {
           <div className='quote'>
             <p>{quotes[quoteIndex][0]}</p>
             <p><i>-{quotes[quoteIndex][1]}</i></p>
-            <button
-              onClick={getRandQuote}
-            >
-              <img src='/static/icons/shuffle.png' alt='shuffle quote' />
-            </button>
+            <div id='quote-btn-box'>
+              <button
+                onClick={incrementQuote}
+              >
+                <img src='/static/icons/next.png' alt='next quote' />
+              </button>
+              <button
+                onClick={getRandQuote}
+              >
+                <img src='/static/icons/shuffle.png' alt='shuffle quote' />
+              </button>
+            </div>
           </div>
         </div>
       </div>
