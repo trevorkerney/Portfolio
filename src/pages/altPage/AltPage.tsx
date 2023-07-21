@@ -13,6 +13,9 @@ const AltPage = () => {
     ['They drew first blood.', 'John Rambo, First Blood'],
     ['Nothing is over! Nothing! You just don\'t turn it off! It wasn\'t my war. You asked me I didn\'t ask you!', 'John Rambo, First Blood'],
     ['Back there I could fly a gunship. I could drive a tank. I was in charge of million dollar equipment! Back here I can\'t even hold a job parking cars!', 'John Rambo, First Blood'],
+    ['Ideals are peaceful... history is violent.', 'Wardaddy, Fury'],
+    ['I know you hate me preaching. I know it. But what we\'re doing here is a righteous act, gentlemen.', 'Bible, Fury'],
+    ['We\'re thieves... in a world that don\'t want us no more.', 'Arthur Morgan, Red Dead Redemption 2'],
   ];
 
   const [quoteIndex, setQuoteIndex] = useState<number>(Math.floor(Math.random() * quotes.length));
@@ -22,7 +25,7 @@ const AltPage = () => {
       setQuoteIndex(0);
     else
       setQuoteIndex(prev => prev + 1)
-  }
+  };
 
   const getRandQuote = () => {
     let index = Math.floor(Math.random() * quotes.length);
