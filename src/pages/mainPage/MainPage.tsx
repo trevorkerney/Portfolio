@@ -51,7 +51,7 @@ const MainPage = () => {
               <img src='/static/icons/waverunner.png' alt='Waverunner' />
               <h2>Waverunner</h2>
             </div>
-            <p>A multimedia library written in Rust and Typescript, using <a href='https://tauri.app/' target='_blank' rel='noreferrer'>Tauri</a> and React. Currently in delayed development.</p>
+            <p>A multimedia library written in Rust and Typescript, using <a href='https://tauri.app/' target='_blank' rel='noreferrer' className='selectable'>Tauri</a> and React. Currently in delayed development.</p>
             <a href='https://github.com/trevorkerney/Waverunner' target='_blank' rel='noreferrer' className='add-link'>
               <img src='/static/icons/github64.png' alt='Waverunner on GitHub' />
             </a>

@@ -29,6 +29,14 @@ div#projects-box {
         justify-content: center;
         margin-top: .5rem;
 
+        &:hover {
+          opacity: .7;
+        }
+
+        &:active {
+          opacity: .4;
+        }
+
         img {
           width: 1rem;
         }

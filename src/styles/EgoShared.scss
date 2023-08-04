@@ -1,3 +1,11 @@
+a {
+  user-select: none;
+}
+
+a.selectable {
+  user-select: auto;
+}
+
 div#header {
   display: flex;
 
@@ -111,11 +119,7 @@ div#header {
         a.link-a {
 
           &:hover {
-            opacity: 0.6;
-          }
-
-          &:active {
-            opacity: 0.2;
+            text-decoration: underline;
           }
         }
 
