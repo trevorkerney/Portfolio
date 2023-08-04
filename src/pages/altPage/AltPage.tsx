@@ -75,13 +75,13 @@ const AltPage = () => {
             </span>
           </li>
           <li className='link'>
-            <a className='link-a' href='https://steamcommunity.com/id/evosity/'>
+            <a className='link-a' href='https://steamcommunity.com/id/evosity/' target='_blank' rel='noreferrer'>
               <img className='link-logo' src='/static/icons/steam64.png' alt='steam' />
               Steam - Evosity
             </a>
           </li>
           <li className='link'>
-            <a className='link-a' href='https://open.spotify.com/user/trevorkerney?si=7ba2d3d1c8304eef'>
+            <a className='link-a' href='https://open.spotify.com/user/trevorkerney' target='_blank' rel='noreferrer'>
               <img className='link-logo' src='/static/icons/spotify64.png' alt='spotify' />
               Spotify - trevorkerney
             </a>

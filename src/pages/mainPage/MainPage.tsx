@@ -28,13 +28,13 @@ const MainPage = () => {
         <div id='links-box'>
           <ul id='links'>
             <li className='link'>
-              <a className='link-a' href='https://github.com/trevorkerney'>
+              <a className='link-a' href='https://github.com/trevorkerney' target='_blank' rel='noreferrer'>
                 <img className='link-logo' src='/static/icons/github64.png' alt='github' />
                 GitHub - trevorkerney
               </a>
             </li>
             <li className='link'>
-              <a className='link-a' href='https://www.linkedin.com/in/trevorkerney'>
+              <a className='link-a' href='https://www.linkedin.com/in/trevorkerney' target='_blank' rel='noreferrer'>
                 <img className='link-logo' src='/static/icons/linkedin64.png' alt='linkedin' />
                 LinkedIn - trevorkerney
               </a>
@@ -48,20 +48,23 @@ const MainPage = () => {
         <ul id='projects'>
           <li>
             <div>
-              <img src="/static/icons/waverunner.png" alt='Waverunner' />
-              <a href='https://github.com/trevorkerney/Waverunner'><h2>Waverunner</h2></a>
+              <img src='/static/icons/waverunner.png' alt='Waverunner' />
+              <h2>Waverunner</h2>
             </div>
-            <p>A multimedia library written in Rust and Typescript, using <a href='https://tauri.app/'>Tauri</a> and React. Currently in delayed development.</p>
+            <p>A multimedia library written in Rust and Typescript, using <a href='https://tauri.app/' target='_blank' rel='noreferrer'>Tauri</a> and React. Currently in delayed development.</p>
+            <a href='https://github.com/trevorkerney/Waverunner' target='_blank' rel='noreferrer' className='add-link'>
+              <img src='/static/icons/github64.png' alt='Waverunner on GitHub' />
+            </a>
           </li>
           <li>
             <div>
-              <img src="/static/icons/powsim.png" alt='POWsim' />
-              <a href='https://powsim.trevorkerney.com'><h2>POWsim</h2></a>
+              <img src='/static/icons/powsim.png' alt='POWsim' />
+              <a href='https://powsim.trevorkerney.com' target='_blank' rel='noreferrer'><h2>POWsim</h2></a>
             </div>
             <p>
               A proof-of-work simulator written in Typescript, using React.
             </p>
-            <a href='https://github.com/trevorkerney/POWsim' className='add-link'>
+            <a href='https://github.com/trevorkerney/POWsim' target='_blank' rel='noreferrer' className='add-link'>
               <img src='/static/icons/github64.png' alt='POWsim on GitHub' />
             </a>
           </li>
