@@ -6,9 +6,10 @@ import '../../styles/EgoShared.css'
 const AltPage = () => {
   const quotes: [string, string][] = [
     ['Yeah, most of the time, I was convinced, shit, I\'d lost it... but there were other times... I thought I was mainlining the secret truth of the universe.', 'Rust Cohle, True Detective, season 1'],
+    ['I don\'t sleep, I just dream.', 'Rust Cohle, True Detective, season 1'],
     ['You dad. I\'d still have you.', 'Mark Grayson, Invincible'],
     ['So you were always like this.', 'Walter White, Better Call Saul'],
-    ['It\'s not about money... it\'s about sending a message. Everything burns!', 'The Joker, The Dark Knight'],
+    // ['It\'s not about money... it\'s about sending a message. Everything burns!', 'The Joker, The Dark Knight'],
     ['Yeah.', 'John Wick, John Wick'],
     ['They drew first blood.', 'John Rambo, First Blood'],
     ['Nothing is over! Nothing! You just don\'t turn it off! It wasn\'t my war. You asked me I didn\'t ask you!', 'John Rambo, First Blood'],
@@ -41,9 +42,10 @@ const AltPage = () => {
       <div id='profile'>
         <div id='img-box'>
           <img 
-          id='profile-img' 
-          src='/static/img/joker600.jpg'
-          alt='Trevor Kerney' />
+            id='profile-img' 
+            src='/static/img/joker600.jpg'
+            alt='Trevor Kerney'
+          />
         </div>
         <div id='about'>
           <h1 className='ab-sec' id='name'>Evosity</h1>
