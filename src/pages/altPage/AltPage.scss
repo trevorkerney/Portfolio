@@ -1,3 +1,20 @@
+div#img-box {
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .9;
+    }
+
+    &:active {
+      opacity: .7;
+    }
+  }
+}
+
 div.quote {
   margin-top: .5rem;
   display: flex;

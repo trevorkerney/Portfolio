@@ -114,6 +114,7 @@ div#header {
           display: flex;
           align-items: center;
           text-decoration: none;
+          user-select: none;
         }
 
         a.link-a {

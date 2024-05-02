@@ -1,5 +1,5 @@
-import './MainPage.css';
-import '../../styles/EgoShared.css'
+import './MainPage.scss';
+import '../../styles/EgoShared.scss'
 
 const MainPage = () => {
   return (

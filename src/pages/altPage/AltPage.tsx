@@ -1,9 +1,10 @@
 import { useState } from "react";
 
-import './AltPage.css';
-import '../../styles/EgoShared.css'
+import './AltPage.scss';
+import '../../styles/EgoShared.scss'
 
-const AltPage = () => {
+const AltPage = (props: {imgUrl: string, incrementProfile: () => void}) => {
+
   const quotes: [string, string][] = [
     ['Yeah, most of the time, I was convinced, shit, I\'d lost it... but there were other times... I thought I was mainlining the secret truth of the universe.', 'Rust Cohle, True Detective, season 1'],
     ['I don\'t sleep, I just dream.', 'Rust Cohle, True Detective, season 1'],
@@ -21,16 +22,13 @@ const AltPage = () => {
     ['We\'re thieves... in a world that don\'t want us no more.', 'Arthur Morgan, Red Dead Redemption 2'],
     // ['When you join my command, you take on debit. A debit you owe me, personally. Each and every man under my command owes me 100 Nazi scalps. And I want my scalps. And all y\'all will get me 100 Nazi scalps taken from the heads of 100 dead Nazis. Or you will die tryin!', 'Aldo Raine, Inglorious Basterds'],
   ];
-
   const [quoteIndex, setQuoteIndex] = useState<number>(Math.floor(Math.random() * quotes.length));
-
   const incrementQuote = () => {
     if (quoteIndex >= quotes.length - 1)
       setQuoteIndex(0);
     else
       setQuoteIndex(prev => prev + 1)
   };
-
   const getRandQuote = () => {
     let index = Math.floor(Math.random() * quotes.length);
     while (index === quoteIndex)
@@ -42,11 +40,13 @@ const AltPage = () => {
     <div id='header'>
       <div id='profile'>
         <div id='img-box'>
-          <img 
-            id='profile-img' 
-            src='/static/img/joker600.jpg'
-            alt='Trevor Kerney'
-          />
+          <button onClick={props.incrementProfile}>
+            <img 
+              id='profile-img' 
+              src={props.imgUrl}
+              alt='Trevor Kerney'
+            />
+          </button>
         </div>
         <div id='about'>
           <h1 className='ab-sec' id='name'>Evosity</h1>
