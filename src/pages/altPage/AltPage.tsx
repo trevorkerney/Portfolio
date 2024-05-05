@@ -15,6 +15,7 @@ const AltPage = (props: {imgUrl: string, incrementProfile: () => void}) => {
     ['Yeah.', 'John Wick, John Wick'],
     // ['They drew first blood.', 'John Rambo, First Blood'],
     ['Nothing is over! Nothing! You just don\'t turn it off! It wasn\'t my war. You asked me I didn\'t ask you!', 'John Rambo, First Blood'],
+    ["God didn't make Rambo. I made him.", 'Colonel Trautman, First Blood'],
     // ['Back there I could fly a gunship. I could drive a tank. I was in charge of million dollar equipment! Back here I can\'t even hold a job parking cars!', 'John Rambo, First Blood'],
     // ['Ideals are peaceful... history is violent.', 'Wardaddy, Fury'],
     // ['Shut up and send me more pigs to kill! (translated from German)', 'Wardaddy, Fury'],

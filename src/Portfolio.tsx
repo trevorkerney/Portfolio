@@ -2,8 +2,10 @@ import { useState } from 'react';
 
 import MainPage from './pages/mainPage/MainPage';
 import AltPage from './pages/altPage/AltPage';
+import SnowAnimation from './components/snowAnimation/SnowAnimation';
 
 import './Portfolio.scss';
+
 
 function Portfolio() {
 
@@ -13,19 +15,25 @@ function Portfolio() {
     [
       '/static/img/joker600.jpg',
       {
-        background: 'linear-gradient(45deg, rgba(37,10,89,1) 0%, rgba(47,11,112,1) 20%, rgba(58,10,145,1) 100%)',
+        backgroundImage: 'url(\'/static/img/joker.gif\')',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
       }
     ],
     [
       '/static/img/liotta.png',
       {
-        background: 'linear-gradient(132deg, rgba(103,17,17,1) 10%, rgba(72,15,15,1) 38%, rgba(60,14,14,1) 76%)',
+        backgroundImage: 'url(\'/static/img/goodfellas.gif\')',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
       }
     ],
     [
       '/static/img/wick2.png',
       {
-        backgroundImage: 'url(\'/static/img/wick.gif\')',
+        backgroundImage: 'url(\'/static/img/wick4.gif\')',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -35,6 +43,33 @@ function Portfolio() {
       '/static/img/bible.png',
       {
         backgroundImage: 'url(\'/static/img/fury3.gif\')',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+      }
+    ],
+    [
+      '/static/img/bony.jpg',
+      {
+        backgroundImage: 'url(\'/static/img/tony.gif\')',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+      }
+    ],
+    [
+      '/static/img/hellyr.png',
+      {
+        backgroundImage: 'url(\'/static/img/severance.gif\')',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+      }
+    ],
+    [
+      '/static/img/rambo3.png',
+      {
+        backgroundImage: 'url(\'/static/img/blood.gif\')',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -50,9 +85,17 @@ function Portfolio() {
       setProfileIndex(prev => prev + 1);
   };
 
+  const isChristmas = (): boolean => {
+    const now = new Date(Date.now());
+    const [month, day] = [now.getMonth(), now.getDate()];
+    return (month === 11 && day >= 20 && day <= 31);
+  }
+
   return (
     <>
-      
+      {
+        (isChristmas()) && <SnowAnimation />
+      }
       <div
         id='portfolio'
         style={
@@ -80,7 +123,6 @@ function Portfolio() {
             <img id='shuffle' src='/static/icons/shuffle.png' alt='shuffle' />
           </button>
         </div>
-
         {
           (persona)
           ? <MainPage />
