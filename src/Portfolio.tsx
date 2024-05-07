@@ -102,7 +102,7 @@ function Portfolio() {
   return (
     <>
       {
-        (isChristmas()) && <SnowAnimation />
+        isChristmas() && <SnowAnimation />
       }
       <div
         id='portfolio'
