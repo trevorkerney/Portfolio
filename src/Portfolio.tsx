@@ -16,35 +16,35 @@ const isChristmas = (): boolean => {
 const profiles: [string, string][] = [
   [
     '/static/img/joker600.jpg',
-    'url(\'/static/img/joker.gif\')'
+    '/static/img/joker.gif'
   ],
   [
     '/static/img/liotta.png',
-    'url(\'/static/img/goodfellas.gif\')'
+    '/static/img/goodfellas.gif'
   ],
   [
     '/static/img/wick2.png',
-    'url(\'/static/img/wick4.gif\')'
+    '/static/img/wick4.gif'
   ],
   [
     '/static/img/bible.png',
-    'url(\'/static/img/fury3.gif\')'
+    '/static/img/fury3.gif'
   ],
   [
     '/static/img/bony.jpg',
-    'url(\'/static/img/tony.gif\')'
+    '/static/img/tony.gif'
   ],
   [
     '/static/img/hellyr.png',
-    'url(\'/static/img/severance.gif\')'
+    '/static/img/severance.gif'
   ],
   [
     '/static/img/rambo3.png',
-    'url(\'/static/img/blood.gif\')'
+    '/static/img/blood.gif'
   ],
   [
     '/static/img/dufresne4.png',
-    'url(\'/static/img/shawshank.gif\')'
+    '/static/img/shawshank.gif'
   ]
 ];
 
@@ -70,7 +70,7 @@ function Portfolio() {
           (persona)
           ? {}
           : {
-            backgroundImage: profiles[profileIndex][1],
+            backgroundImage: `url(\'${profiles[profileIndex][1]}\')`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
