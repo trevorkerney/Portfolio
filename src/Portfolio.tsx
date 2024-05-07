@@ -7,85 +7,90 @@ import SnowAnimation from './components/snowAnimation/SnowAnimation';
 import './Portfolio.scss';
 
 
+const isChristmas = (): boolean => {
+  const now = new Date(Date.now());
+  const [month, day] = [now.getMonth(), now.getDate()];
+  return (month === 11 && day >= 20 && day <= 31);
+}
+
+const profiles: [string, Object][] = [
+  [
+    '/static/img/joker600.jpg',
+    {
+      backgroundImage: 'url(\'/static/img/joker.gif\')',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+    }
+  ],
+  [
+    '/static/img/liotta.png',
+    {
+      backgroundImage: 'url(\'/static/img/goodfellas.gif\')',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+    }
+  ],
+  [
+    '/static/img/wick2.png',
+    {
+      backgroundImage: 'url(\'/static/img/wick4.gif\')',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+    }
+  ],
+  [
+    '/static/img/bible.png',
+    {
+      backgroundImage: 'url(\'/static/img/fury3.gif\')',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+    }
+  ],
+  [
+    '/static/img/bony.jpg',
+    {
+      backgroundImage: 'url(\'/static/img/tony.gif\')',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+    }
+  ],
+  [
+    '/static/img/hellyr.png',
+    {
+      backgroundImage: 'url(\'/static/img/severance.gif\')',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+    }
+  ],
+  [
+    '/static/img/rambo3.png',
+    {
+      backgroundImage: 'url(\'/static/img/blood.gif\')',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+    }
+  ],
+  [
+    '/static/img/dufresne4.png',
+    {
+      backgroundImage: 'url(\'/static/img/shawshank.gif\')',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+    }
+  ]
+];
+
 function Portfolio() {
 
   const [persona, setPersona] = useState<boolean>(true);
-
-  const profiles: [string, Object][] = [
-    [
-      '/static/img/joker600.jpg',
-      {
-        backgroundImage: 'url(\'/static/img/joker.gif\')',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }
-    ],
-    [
-      '/static/img/liotta.png',
-      {
-        backgroundImage: 'url(\'/static/img/goodfellas.gif\')',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }
-    ],
-    [
-      '/static/img/wick2.png',
-      {
-        backgroundImage: 'url(\'/static/img/wick4.gif\')',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }
-    ],
-    [
-      '/static/img/bible.png',
-      {
-        backgroundImage: 'url(\'/static/img/fury3.gif\')',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }
-    ],
-    [
-      '/static/img/bony.jpg',
-      {
-        backgroundImage: 'url(\'/static/img/tony.gif\')',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }
-    ],
-    [
-      '/static/img/hellyr.png',
-      {
-        backgroundImage: 'url(\'/static/img/severance.gif\')',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }
-    ],
-    [
-      '/static/img/rambo3.png',
-      {
-        backgroundImage: 'url(\'/static/img/blood.gif\')',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }
-    ],
-    [
-      '/static/img/dufresne4.png',
-      {
-        backgroundImage: 'url(\'/static/img/shawshank.gif\')',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }
-    ]
-  ];
-  // const [profileIndex, setProfileIndex] = useState<number>(Math.floor(Math.random() * profiles.length));
   const [profileIndex, setProfileIndex] = useState<number>(0);
   const incrementProfile = () => {
     if (profileIndex >= profiles.length - 1)
@@ -93,12 +98,6 @@ function Portfolio() {
     else
       setProfileIndex(prev => prev + 1);
   };
-
-  const isChristmas = (): boolean => {
-    const now = new Date(Date.now());
-    const [month, day] = [now.getMonth(), now.getDate()];
-    return (month === 11 && day >= 20 && day <= 31);
-  }
 
   return (
     <>
