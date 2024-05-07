@@ -39,6 +39,7 @@ div.quote {
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
   
       &:hover {
         opacity: 0.6;

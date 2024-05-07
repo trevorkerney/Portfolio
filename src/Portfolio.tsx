@@ -74,6 +74,15 @@ function Portfolio() {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
       }
+    ],
+    [
+      '/static/img/dufresne4.png',
+      {
+        backgroundImage: 'url(\'/static/img/shawshank.gif\')',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+      }
     ]
   ];
   // const [profileIndex, setProfileIndex] = useState<number>(Math.floor(Math.random() * profiles.length));
