@@ -13,78 +13,38 @@ const isChristmas = (): boolean => {
   return (month === 11 && day >= 20 && day <= 31);
 }
 
-const profiles: [string, Object][] = [
+const profiles: [string, string][] = [
   [
     '/static/img/joker600.jpg',
-    {
-      backgroundImage: 'url(\'/static/img/joker.gif\')',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    }
+    'url(\'/static/img/joker.gif\')'
   ],
   [
     '/static/img/liotta.png',
-    {
-      backgroundImage: 'url(\'/static/img/goodfellas.gif\')',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    }
+    'url(\'/static/img/goodfellas.gif\')'
   ],
   [
     '/static/img/wick2.png',
-    {
-      backgroundImage: 'url(\'/static/img/wick4.gif\')',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    }
+    'url(\'/static/img/wick4.gif\')'
   ],
   [
     '/static/img/bible.png',
-    {
-      backgroundImage: 'url(\'/static/img/fury3.gif\')',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    }
+    'url(\'/static/img/fury3.gif\')'
   ],
   [
     '/static/img/bony.jpg',
-    {
-      backgroundImage: 'url(\'/static/img/tony.gif\')',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    }
+    'url(\'/static/img/tony.gif\')'
   ],
   [
     '/static/img/hellyr.png',
-    {
-      backgroundImage: 'url(\'/static/img/severance.gif\')',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    }
+    'url(\'/static/img/severance.gif\')'
   ],
   [
     '/static/img/rambo3.png',
-    {
-      backgroundImage: 'url(\'/static/img/blood.gif\')',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    }
+    'url(\'/static/img/blood.gif\')'
   ],
   [
     '/static/img/dufresne4.png',
-    {
-      backgroundImage: 'url(\'/static/img/shawshank.gif\')',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    }
+    'url(\'/static/img/shawshank.gif\')'
   ]
 ];
 
@@ -109,7 +69,12 @@ function Portfolio() {
         style={
           (persona)
           ? {}
-          : profiles[profileIndex][1]
+          : {
+            backgroundImage: profiles[profileIndex][1],
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+          }
         }
       >
         <div id='shuffle-box'>
