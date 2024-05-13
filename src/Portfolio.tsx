@@ -15,36 +15,40 @@ const isChristmas = (): boolean => {
 
 const profiles: [string, string][] = [
   [
-    '/static/img/joker600.jpg',
-    '/static/img/joker.gif'
+    '/static/imgs/joker600.jpg',
+    '/static/gifs/joker.gif'
   ],
   [
-    '/static/img/liotta.png',
-    '/static/img/goodfellas.gif'
+    '/static/imgs/liotta.png',
+    '/static/gifs/goodfellas.gif'
   ],
   [
-    '/static/img/wick2.png',
-    '/static/img/wick4.gif'
+    '/static/imgs/wick2.png',
+    '/static/gifs/wick4.gif'
   ],
   [
-    '/static/img/bible.png',
-    '/static/img/fury3.gif'
+    '/static/imgs/bible.png',
+    '/static/gifs/fury3.gif'
   ],
   [
-    '/static/img/bony.jpg',
-    '/static/img/tony.gif'
+    '/static/imgs/bony.jpg',
+    '/static/gifs/tony.gif'
   ],
   [
-    '/static/img/hellyr.png',
-    '/static/img/severance.gif'
+    '/static/imgs/hellyr.png',
+    '/static/gifs/severance.gif'
   ],
   [
-    '/static/img/rambo3.png',
-    '/static/img/blood.gif'
+    '/static/imgs/rambo3.png',
+    '/static/gifs/blood.gif'
   ],
   [
-    '/static/img/dufresne4.png',
-    '/static/img/shawshank.gif'
+    '/static/imgs/dufresne4.png',
+    '/static/gifs/shawshank.gif'
+  ],
+  [
+    '/static/imgs/shikishima.png',
+    '/static/gifs/godzillamo.gif'
   ]
 ];
 
@@ -70,7 +74,7 @@ function Portfolio() {
           (persona)
           ? {}
           : {
-            backgroundImage: `url(\'${profiles[profileIndex][1]}\')`,
+            backgroundImage: `url('${profiles[profileIndex][1]}')`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',

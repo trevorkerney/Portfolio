@@ -10,7 +10,7 @@ const MainPage = () => {
           <div id='img-box'>
             <img 
             id='profile-img' 
-            src='/static/img/me.png'
+            src='/static/imgs/me.png'
             alt='Trevor Kerney' />
           </div>
           <div id='about'>
