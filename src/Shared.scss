@@ -1,0 +1,137 @@
+a {
+  user-select: none;
+}
+
+a.selectable {
+  user-select: auto;
+}
+
+div#header {
+  display: flex;
+
+  @media (orientation: portrait) {
+    flex-direction: column;
+  }
+
+  & {
+    --prof-pad: 2rem;
+  }
+
+  div#profile {
+    display: flex;
+    align-items: center;
+
+    padding: var(--prof-pad);
+
+    @media (orientation: landscape) {
+      width: calc(75% - var(--prof-pad));
+    }
+
+    @media (orientation: portrait) {
+      width: calc(100% - var(--prof-pad) * 2);
+      flex-direction: column;
+    }
+
+    div#img-box {
+
+      img#profile-img {
+        width: 12rem;
+        border-radius: 2rem;
+
+        @media (orientation: portrait) {
+          width: 4rem;
+          border-radius: 1rem;
+        }
+      }
+    }
+
+    div#about {
+      @media (orientation: landscape) {
+        margin-left: 2rem;
+      }
+      
+      @media (orientation: portrait) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .ab-logo {
+        width: 1.2rem;
+        margin-right: .4rem;
+      }
+
+      .ab-sec {
+        margin: .5rem 0 .5rem 0;
+        display: flex;
+        align-items: center;
+
+        @media (orientation: portrait) {
+          justify-content: center;
+        }
+      }
+      
+      h1#name {
+        font-size: 2rem;
+        font-family: 'Times New Roman';
+      }
+
+      p#bio {
+        margin-top: 1rem;
+        width: 100%;
+
+        @media (orientation: portrait) {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  div#links-box {
+    padding: var(--prof-pad);
+    display: flex;
+
+    @media (orientation: landscape) {
+      width: calc(25% - var(--prof-pad) * 2);
+      flex-direction: row;
+    }
+
+    @media (orientation: portrait) {
+      width: calc(100% - var(--prof-pad) * 2);
+      flex-direction: column;
+      padding-top: 0;
+    }
+
+    ul#links {
+      list-style: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      li.link {
+        margin: .25rem 0 .25rem 0;
+
+        a.link-a, span.link-a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          user-select: none;
+        }
+
+        a.link-a {
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        img.link-logo {
+          width: 1.2rem;
+          margin-right: .4rem;
+        }
+      }
+    }
+  }
+}

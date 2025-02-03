@@ -1,0 +1,67 @@
+div#img-box {
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .9;
+    }
+
+    &:active {
+      opacity: .7;
+    }
+  }
+}
+
+div.quote {
+  margin-top: .5rem;
+  display: flex;
+  flex-direction: column;
+
+  @media (orientation: portrait) {
+    align-items: center;
+    text-align: center;
+  }
+
+  div#quote-btn-box {
+    display: flex;
+    align-items: center;
+
+    button {
+      background-color: transparent;
+      border: none;
+      text-decoration: underline;
+      font-size: .7rem;
+      
+      // width: 1rem;
+      // height: 1rem;
+      // border-radius: 1rem;
+      // background-color: #181818;
+      // border: 1px solid #0f0f0f;
+
+      margin: .25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+  
+      &:hover {
+        opacity: 0.6;
+      }
+  
+      &:active {
+        opacity: 0.2;
+      }
+  
+      img {
+        width: 60%;
+      }
+    }
+  }
+
+  p {
+    margin: .25rem 0;
+  }
+}

@@ -1,0 +1,56 @@
+div#projects-box {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ul#projects {
+    list-style: none;
+    padding: 0;
+
+    h2 {
+      font-family: 'Times New Roman';
+      font-size: 1.75rem;
+    }
+
+    li {
+      margin-bottom: 4rem;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 3.5rem;
+
+        img {
+          margin-right: .5rem;
+          width: 3rem;
+        }
+      }
+
+      a.add-link {
+        display: flex;
+        justify-content: center;
+        margin-top: .5rem;
+
+        &:hover {
+          opacity: .7;
+        }
+
+        &:active {
+          opacity: .4;
+        }
+
+        img {
+          width: 1rem;
+        }
+      }
+
+      p {
+        margin-top: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
