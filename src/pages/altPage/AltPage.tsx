@@ -24,7 +24,7 @@ const quotes: [string, string][] = [
   ['Can you hear the music, Robert?', 'Niels Bohr, Oppenheimer'],
   ['So here we are, hmm? Lost in your quantum world of probabilities ...and needing certainty.', 'Albert Einstein, Oppenheimer'],
   ['Excuse me, gentlemen, if I become stirred. But I am.', 'Vannevar Bush, Oppenheimer'],
-  ['It\'s always Christmas.', 'Gemma Scout (innie), Severance, season 2'],
+  ['It\'s always Christmas.', 'Gemma Scout (Allentown innie), Severance, season 2'],
 ];
 
 const AltPage = (props: {imgUrl: string, incrementProfile: () => void}) => {
