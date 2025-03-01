@@ -16,14 +16,15 @@ const quotes: [string, string][] = [
   ['Nothing is over! Nothing! You just don\'t turn it off! It wasn\'t my war. You asked me I didn\'t ask you!', 'John Rambo, First Blood'],
   ["God didn't make Rambo. I made him.", 'Colonel Trautman, First Blood'],
   // ['Back there I could fly a gunship. I could drive a tank. I was in charge of million dollar equipment! Back here I can\'t even hold a job parking cars!', 'John Rambo, First Blood'],
-  // ['Ideals are peaceful ...history is violent.', 'Wardaddy, Fury'],
+  ['Ideals are peaceful ...history is violent.', 'Wardaddy, Fury'],
   // ['Shut up and send me more pigs to kill! (translated from German)', 'Wardaddy, Fury'],
   ['I know you hate me preaching. I know it. But what we\'re doing here is a righteous act, gentlemen.', 'Bible, Fury'],
   ['We\'re thieves in a world that don\'t want us no more.', 'Arthur Morgan, Red Dead Redemption 2'],
   // ['When you join my command, you take on debit. A debit you owe me, personally. Each and every man under my command owes me 100 Nazi scalps. And I want my scalps. And all y\'all will get me 100 Nazi scalps taken from the heads of 100 dead Nazis. Or you will die tryin!', 'Aldo Raine, Inglorious Basterds'],
   ['Can you hear the music, Robert?', 'Niels Bohr, Oppenheimer'],
   ['So here we are, hmm? Lost in your quantum world of probabilities ...and needing certainty.', 'Albert Einstein, Oppenheimer'],
-  ['Excuse me, gentlemen, if I become stirred. But I am.', 'Vannevar Bush, Oppenheimer']
+  ['Excuse me, gentlemen, if I become stirred. But I am.', 'Vannevar Bush, Oppenheimer'],
+  ['It\'s always Christmas.', 'Gemma Scout (innie), Severance, season 2'],
 ];
 
 const AltPage = (props: {imgUrl: string, incrementProfile: () => void}) => {
