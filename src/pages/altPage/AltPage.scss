@@ -4,8 +4,27 @@ footer {
   left: 1rem;
   
   p {
-    font-size: .8rem;
+    font-size: .96rem;
     margin: 0;
+  }
+}
+
+button#title-btn {
+  background-color: transparent;
+  border: none;
+  font-size: .96rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+
+  &:hover {
+    opacity: .9;
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: .7;
+    text-decoration: underline;
   }
 }
 
@@ -30,6 +49,7 @@ div.quote {
   margin-top: .5rem;
   display: flex;
   flex-direction: column;
+  font-size: .96rem;
 
   @media (orientation: portrait) {
     align-items: center;
@@ -44,7 +64,7 @@ div.quote {
       background-color: transparent;
       border: none;
       text-decoration: underline;
-      font-size: .7rem;
+      font-size: .84rem;
       
       // width: 1rem;
       // height: 1rem;

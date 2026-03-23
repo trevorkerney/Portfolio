@@ -10,21 +10,24 @@ const quotes: [string, string][] = [
   // ['My life has been a circle of violence and degredation, long as I can remember. I\'m ready to tie it off.', 'Rust Cohle, True Detective, season 1'],
   ['You dad. I\'d still have you.', 'Mark Grayson, Invincible, season 1'],
   ['So you were always like this.', 'Walter White, Better Call Saul, season 5'],
+  ['Yeah there\'s no deep seated issues there.', 'Saul Goodman, Breaking Bad, season 2'],
   // ['It\'s not about money ...it\'s about sending a message. Everything burns!', 'The Joker, The Dark Knight'],
-  ['Yeah.', 'John Wick, John Wick'],
   // ['They drew first blood.', 'John Rambo, First Blood'],
   ['Nothing is over! Nothing! You just don\'t turn it off! It wasn\'t my war. You asked me I didn\'t ask you!', 'John Rambo, First Blood'],
+  ['This woman was like a... like a princess. I\'ll tell you what... for a while there, Jackie Kennedy thought the marriage was over.', 'Tony Soprano, The Sopranos, season 5'],
   // ["God didn't make Rambo. I made him.", 'Colonel Trautman, First Blood'],
   // ['Back there I could fly a gunship. I could drive a tank. I was in charge of million dollar equipment! Back here I can\'t even hold a job parking cars!', 'John Rambo, First Blood'],
   // ['Ideals are peaceful ...history is violent.', 'Wardaddy, Fury'],
   // ['Shut up and send me more pigs to kill! (translated from German)', 'Wardaddy, Fury'],
   ['I know you hate me preaching. I know it. But what we\'re doing here is a righteous act, gentlemen.', 'Bible, Fury'],
+  ['Yeah.', 'John Wick, John Wick'],
   // ['We\'re thieves in a world that don\'t want us no more.', 'Arthur Morgan, Red Dead Redemption 2'],
   ['Can you hear the music, Robert?', 'Niels Bohr, Oppenheimer'],
-  // ['So here we are, hmm? Lost in your quantum world of probabilities ...and needing certainty.', 'Albert Einstein, Oppenheimer'],
+  ['So here we are, hmm? Lost in your quantum world of probabilities ...and needing certainty.', 'Albert Einstein, Oppenheimer'],
   // ['Excuse me, gentlemen, if I become stirred. But I am.', 'Vannevar Bush, Oppenheimer'],
   ['It\'s always Christmas.', 'Gemma Scout (Allentown innie), Severance, season 2'],
   ['The sanity of the plan is of no consequence.', 'Dr. Zola, Captain America'],
+  ['I like oak myself. That\'s what I have in my bedroom. How about you Jimmie? You an oak man?', 'The Wolf, Pulp Fiction'],
 ];
 
 const AltPage = (props: {imgUrl: string, incrementProfile: () => void, movie: string}) => {
@@ -39,7 +42,14 @@ const AltPage = (props: {imgUrl: string, incrementProfile: () => void, movie: st
 
   return (
     <>
-      <footer><p>{props.movie}</p></footer>
+      <footer>
+        <button
+          id='title-btn'
+          onClick={props.incrementProfile}
+        >
+          {props.movie}
+        </button>
+      </footer>
       <div id='header'>
         <div id='profile'>
           <div id='img-box'>
@@ -52,7 +62,7 @@ const AltPage = (props: {imgUrl: string, incrementProfile: () => void, movie: st
             </button>
           </div>
           <div id='about'>
-            <h1 className='ab-sec' id='name'>Evosity</h1>
+            <h1 className='ab-sec' id='name'>evosity</h1>
             <div className='quote'>
               <p>{quotes[quoteIndex][0]}</p>
               <p><i>{`- ${quotes[quoteIndex][1]}`}</i></p>
@@ -77,7 +87,7 @@ const AltPage = (props: {imgUrl: string, incrementProfile: () => void, movie: st
             <li className='link'>
               <a className='link-a' href='https://steamcommunity.com/id/evosity/' target='_blank' rel='noreferrer'>
                 <img className='link-logo' src='/static/icons/steam64.png' alt='steam' />
-                Steam - Evosity
+                Steam - evosity
               </a>
             </li>
             <li className='link'>

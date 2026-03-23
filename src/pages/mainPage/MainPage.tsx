@@ -17,11 +17,14 @@ const MainPage = () => {
             <h1 className='ab-sec' id='name'>Trevor Kerney</h1>
             <h4 className='ab-sec' id='job'>
               <img className='ab-logo' src='/static/icons/gs-vb64.png' alt='Geosonics-VibraTech' />
-              Full-Stack Software Engineer at Vibra-Tech
+              Full-Stack Software Developer at Vibra-Tech
             </h4>
             <p className='ab-sec' id='bio'>
-              I'm a (mostly) self-taught software engineering generalist driven by a passion for creating efficient, reliable, and secure applications. I have a point of contention with (most) software products that are not free and open source, as these products tend to inhibit customization, promote overcommercialization of the internet, and create an illusion of privacy.
+              (Mostly) self-taught software generalist with a focus on user-facing app development 
             </p>
+            {/* <p className='ab-sec' id='bio'>
+              I'm a (mostly) self-taught software engineering generalist driven by a passion for creating efficient, reliable, and secure applications. I have a point of contention with (most) software products that are not free and open source, as these products tend to inhibit customization, promote overcommercialization of the internet, and create an illusion of privacy.
+            </p> */}
           </div>
         </div>
 
@@ -46,7 +49,7 @@ const MainPage = () => {
 
       <div id='projects-box'>
         <ul id='projects'>
-          <li>
+          {/* <li>
             <div>
               <img src='/static/icons/waverunner.png' alt='Waverunner' />
               <h2>Waverunner</h2>
@@ -55,7 +58,7 @@ const MainPage = () => {
             <a href='https://github.com/trevorkerney/Waverunner' target='_blank' rel='noreferrer' className='add-link'>
               <img src='/static/icons/github64.png' alt='Waverunner on GitHub' />
             </a>
-          </li>
+          </li> */}
           <li>
             <div>
               <img src='/static/icons/powsim.png' alt='POWsim' />
